@@ -2,8 +2,8 @@
  * had_params.h
  *
  *  Created on: 2021/09/12
- *  Author: HidemiANDO(@safs01075)
- *  Copyright © <Year> HidemiANDO. All rights reserved.
+ *  Author: nwk-had(@safs01075)
+ *  Copyright © <2022> nwk-had. All rights reserved.
  */
 
 #ifndef HAD_PARAMS_H_
