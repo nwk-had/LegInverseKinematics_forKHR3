@@ -25,5 +25,7 @@ KCB-5ライブラリは近藤科学株式会社様の著作物のため付属し
 ※x,y,zの単位はmm、thetaの単位はdegreeです
 
 #作成者
-Twitter: @safs01075
-mail: safs0107[at]gmail.com ([at]を@に置換)
+
+*Twitter: @safs01075
+
+*mail: safs0107[at]gmail.com ([at]を@に置換)
