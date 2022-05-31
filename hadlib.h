@@ -3,9 +3,9 @@
 
  *
  *  Created on: 2021/09/12
- *  Author: HidemiANDO(@safs01075)
- *  Copyright © <Year> HidemiANDO. All rights reserved.
- *  本プログラムの商用利用を禁ずる.
+ *  Author: nwk-had(@safs01075)
+ *  Copyright © <2022> nwk-had. All rights reserved.
+ *  本プログラムの無断転載・商用利用を禁ずる.
  *
  *
  *  ~~~以下説明~~~
