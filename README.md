@@ -1,4 +1,4 @@
-# LegInverseKinomatics_forKHR3
+# LegInverseKinematics_forKHR3
 
 KHR-3、PLEN-Dのような軸構成の足の4自由度(足先xyz位置・yaw姿勢)の逆運動学を解くライブラリです。
 商用以外の用途であればご自由にお使いください
