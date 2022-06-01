@@ -62,82 +62,77 @@ unsigned short translate_Deg_to_Step(float deg){
 
 void IK_Rleg(float x,float y,float z,float thR){//thRは単にももピッチ角(deg)
 
-  float dth0=thR;
-  float dth1=0;
-  float dth2=0;
-  float dth3=0;
-  float dth4=0;
-  float dth5=0;
+	  float dth0=thR;
+	  float dth1=0;
+	  float dth2=0;
+	  float dth3=0;
+	  float dth4=0;
+	  float dth5=0;
 
-  //int n=0;
+	  //int n=0;
 
-  //モモくるぶしロール角計算
-  dth1=atan(y/fabsf(z+lsoleoffset))* 180.0 / PI;
-  dth5=atan(y/fabsf(z+lsoleoffset))* 180.0 / PI;
+	  //モモくるぶしロール角計算
+	  dth1=atan(y/fabsf(z+lsoleoffset))* 180.0 / PI;
+	  dth5=atan(y/fabsf(z+lsoleoffset))* 180.0 / PI;
 
-  //膝関節角計算
-//  float zmagshoumen;
-//  float zmaghiza;
-//  zmagshoumen=sqrt(pow(y,2)+pow(zankle,2));
-//  zmaghiza=sqrt(pow(abs(zmagshoumen-2*loffset),2)+pow(x,2));
-//  dth3=180-2*(asin(zmaghiza/(2*l1))* 180.0 / PI);
-  float zmagshoumen;
-  float zmaghiza;
-  zmagshoumen=sqrtf(pow(y,2)+pow(z+lsoleoffset,2));
-  zmaghiza=sqrt(pow(abs(zmagshoumen-2*loffset),2)+pow(x,2));
-  dth3=180-2*(asin(zmaghiza/(2*l1))* 180.0 / PI);
+	  //膝関節角計算
+	  float zmagshoumen;
+	  float zmaghiza;
+	  zmagshoumen=sqrtf(pow(y,2)+pow(z+lsoleoffset,2));
+	  zmaghiza=sqrt(pow(abs(zmagshoumen-2*loffset),2)+pow(x,2));
+	  dth3=180-2*(asin(zmaghiza/(2*l1))* 180.0 / PI);
 
-  //モモピッチ、くるぶしピッチ計算
-  dth2=atan(x/fabsf(zmagshoumen-2*loffset))* 180.0 / PI+(90-asin(zmaghiza/(2*l1))* 180.0 / PI);
-  dth4=atan(x/fabsf(zmagshoumen-2*loffset))* 180.0 / PI-(90-asin(zmaghiza/(2*l1))* 180.0 / PI);
+	  //モモピッチ、くるぶしピッチ計算
+	  dth2=atan(x/fabsf(zmagshoumen-2*loffset))* 180.0 / PI+(90-asin(zmaghiza/(2*l1))* 180.0 / PI);
+	  dth4=atan(x/fabsf(zmagshoumen-2*loffset))* 180.0 / PI-(90-asin(zmaghiza/(2*l1))* 180.0 / PI);
 
-#ifdef ARDUINO_PWM
-  servo_write(0,th1+dth1);
-  servo_write(1,th2-dth2);
-  servo_write(2,th3+dth3);
-  servo_write(3,th4-dth4);
-  servo_write(4,th5+dth5);
-#else
-  Write_angle_R_Leg(dth0,dth1,-dth2,-dth3,-dth4,dth5);
-#endif
+	#ifdef ARDUINO_PWM
+	  servo_write(0,th1+dth1);
+	  servo_write(1,th2-dth2);
+	  servo_write(2,th3+dth3);
+	  servo_write(3,th4-dth4);
+	  servo_write(4,th5+dth5);
+	#else
+	  Write_angle_R_Leg(dth0,dth1,-dth2,-dth3,-dth4,dth5);
+	#endif
 }
 
 void IK_Lleg(float x,float y,float z,float thL){//thLは単にももピッチ角(deg)
 
 
-  float dth0=thL;
-  float dth1=0;
-  float dth2=0;
-  float dth3=0;
-  float dth4=0;
-  float dth5=0;
+	  float dth0=thL;
+	  float dth1=0;
+	  float dth2=0;
+	  float dth3=0;
+	  float dth4=0;
+	  float dth5=0;
 
-  //モモくるぶしロール角計算
-  dth1=atan(y/fabsf(z+lsoleoffset))* 180.0 / PI;
-  dth5=atan(y/fabsf(z+lsoleoffset))* 180.0 / PI;
+	  //モモくるぶしロール角計算
+	  dth1=atan(y/fabsf(z+lsoleoffset))* 180.0 / PI;
+	  dth5=atan(y/fabsf(z+lsoleoffset))* 180.0 / PI;
 
-  //膝関節角計算
-  float zmagshoumen;
-  float zmaghiza;
-  zmagshoumen=sqrtf(pow(y,2)+pow(z+lsoleoffset,2));
-  zmaghiza=sqrt(pow(abs(zmagshoumen-2*loffset),2)+pow(x,2));
-  dth3=180-2*(asin(zmaghiza/(2*l1))* 180.0 / PI);
+	  //膝関節角計算
+	  float zmagshoumen;
+	  float zmaghiza;
+	  zmagshoumen=sqrtf(pow(y,2)+pow(z+lsoleoffset,2));
+	  zmaghiza=sqrt(pow(abs(zmagshoumen-2*loffset),2)+pow(x,2));
+	  dth3=180-2*(asin(zmaghiza/(2*l1))* 180.0 / PI);
 
-  //モモピッチ、くるぶしピッチ計算
-  dth2=atan(x/fabsf(zmagshoumen-2*loffset))* 180.0 / PI+(90-asin(zmaghiza/(2*l1))* 180.0 / PI);
-  dth4=atan(x/fabsf(zmagshoumen-2*loffset))* 180.0 / PI-(90-asin(zmaghiza/(2*l1))* 180.0 / PI);
+	  //モモピッチ、くるぶしピッチ計算
+	  dth2=atan(x/fabsf(zmagshoumen-2*loffset))* 180.0 / PI+(90-asin(zmaghiza/(2*l1))* 180.0 / PI);
+	  dth4=atan(x/fabsf(zmagshoumen-2*loffset))* 180.0 / PI-(90-asin(zmaghiza/(2*l1))* 180.0 / PI);
 
 
-#ifdef ARDUINO_PWM//
-  servo_write(8,th1+dth1);
-  servo_write(9,th2+dth2);
-  servo_write(10,th3-dth3);
-  servo_write(10,150);
-  servo_write(11,th4+dth4);
-  servo_write(12,th5+dth5);
-#else
-  Write_angle_L_Leg(-dth0,-dth1,-dth2,-dth3,-dth4,-dth5);
-#endif
+	#ifdef ARDUINO_PWM//
+	  servo_write(8,th1+dth1);
+	  servo_write(9,th2+dth2);
+	  servo_write(10,th3-dth3);
+	  servo_write(10,150);
+	  servo_write(11,th4+dth4);
+	  servo_write(12,th5+dth5);
+	#else
+	  Write_angle_L_Leg(-dth0,-dth1,-dth2,-dth3,-dth4,-dth5);
+	#endif
 }
 
 void IK_Rleg_Rotation(float x,float y,float z,float thR){//thRはももピッチ角ではなく、足先のピッチ角(deg)
