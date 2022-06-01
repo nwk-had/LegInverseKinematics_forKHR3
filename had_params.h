@@ -38,11 +38,11 @@
 #define deg0_LARM5 90
 
 
-//link length (mm)
-#define l1 65
-#define l2 65//=l1なので使わないかも
-#define loffset 40
-#define lsoleoffset 20
+//link length (mm) for KHR3
+#define l1 65//ももピッチから膝ピッチまでのリンク長
+#define l2 65//膝ピッチからくるぶしピッチまでのリンク長※=l1なので使わないかも
+#define loffset 40//くるぶし・もも両方において、ロール軸とピッチ軸の軸間距離
+#define lsoleoffset 20//足裏からくるぶしロールまでの高さ
 #define PI 3.1415926
 
 //#define ARDUINO_PWM
