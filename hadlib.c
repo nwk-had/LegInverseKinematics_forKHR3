@@ -60,7 +60,7 @@ unsigned short translate_Deg_to_Step(float deg){
 	return step;
 }
 
-void IK_Rleg(float x,float y,float z,float thR){//thRは単にももピッチ角(deg)
+void IK_Rleg(float x,float y,float z,float thR){//thRは単にももヨー角(deg)
 
 	  float dth0=thR;
 	  float dth1=0;
@@ -97,7 +97,7 @@ void IK_Rleg(float x,float y,float z,float thR){//thRは単にももピッチ角
 	#endif
 }
 
-void IK_Lleg(float x,float y,float z,float thL){//thLは単にももピッチ角(deg)
+void IK_Lleg(float x,float y,float z,float thL){//thLは単にももヨー角(deg)
 
 
 	  float dth0=thL;
@@ -135,7 +135,7 @@ void IK_Lleg(float x,float y,float z,float thL){//thLは単にももピッチ角
 	#endif
 }
 
-void IK_Rleg_Rotation(float x,float y,float z,float thR){//thRはももピッチ角ではなく、足先のピッチ角(deg)
+void IK_Rleg_Rotation(float x,float y,float z,float thR){//thRはももヨー角ではなく、足先のヨー角(deg)
 
 	float x_RotatedAxis=cos(thR/ 180.0 * PI)*x+sin(thR/ 180.0 * PI)*(y);
 	float y_RotatedAxis=-sin(thR/ 180.0 * PI)*x+cos(thR/ 180.0 * PI)*(y);
@@ -143,7 +143,7 @@ void IK_Rleg_Rotation(float x,float y,float z,float thR){//thRはももピッチ
 	IK_Rleg(x_RotatedAxis,y_RotatedAxis,z,thR);
 }
 
-void IK_Lleg_Rotation(float x,float y,float z,float thL){//thLは単にももピッチ角ではなく、足先のピッチ角(deg)
+void IK_Lleg_Rotation(float x,float y,float z,float thL){//thLはももヨー角ではなく、足先のヨー角(deg)
 
 	float x_RotatedAxis=cos(thL/ 180.0 * PI)*x+sin(thL/ 180.0 * PI)*(y);
 	float y_RotatedAxis=-sin(thL/ 180.0 * PI)*x+cos(thL/ 180.0 * PI)*(y);
