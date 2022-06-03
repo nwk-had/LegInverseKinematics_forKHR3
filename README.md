@@ -1,4 +1,5 @@
 # LegInverseKinematics_forKHR3
+![jilkukousei](https://user-images.githubusercontent.com/106475836/171871304-90795f01-4cf2-4193-84b2-5bee93a8e621.png)
 
 KHR-3、PLEN-Dのような軸構成の足の4自由度(足先xyz位置・yaw姿勢)の逆運動学を解くプログラムです。
 商用以外の用途であればご自由にお使いください
