@@ -1,9 +1,8 @@
 # LegInverseKinematics_forKHR3
 
-![jilkukousei](https://user-images.githubusercontent.com/106475836/171871771-ec8df6c7-f930-45d5-8c56-b2ec17ea254c.png)
 <img src="https://user-images.githubusercontent.com/106475836/171871771-ec8df6c7-f930-45d5-8c56-b2ec17ea254c.png" width="320px">
 
-KHR-3、PLEN-Dのような軸構成の足の4自由度(足先xyz位置・yaw姿勢)の逆運動学を解くプログラムです。
+KHR-3、PLEN-Dのような関節軸がオフセットされており直交していない軸構成の脚を持つロボットを制御するための4自由度(足先xyz位置・yaw姿勢)の逆運動学を解くプログラムです。（ただし、足の付け根のyaw軸～roll軸間の横方向のオフセットは微小であり無視できると仮定）
 商用以外の用途であればご自由にお使いください
 KCB-5ライブラリは近藤科学株式会社様の著作物のため付属しておりません。
 
