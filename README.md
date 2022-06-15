@@ -44,6 +44,6 @@ KCB-5でKHR3を制御する以外の用途の方は、適宜同様に関節位�
 不明点や問題点、
 その他お気付きの点がございましたら以下まで遠慮無くお問い合わせください。
 
-*Twitter: @safs01075
+*Twitter: @RoboSafs01075
 
 *mail: safs0107[at]gmail.com ([at]を@に置換)
